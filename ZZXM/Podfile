@@ -1,0 +1,27 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+use_frameworks!
+inhibit_all_warnings! #去除警告
+
+target 'ZZXM' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ZZXM
+	∫
+    pod 'SnapKit'  #布局
+    pod 'HandyJSON' #数据解析
+    pod 'Result'
+    pod 'Moya'  #网络请求
+    pod 'Kingfisher' #图片加载
+    pod 'Then' #Swift初始化库
+    pod 'LLCycleScrollView'#轮播
+    pod 'MJRefresh'
+    pod 'MBProgressHUD'
+    pod 'IQKeyboardManagerSwift'
+    pod 'EmptyDataSet-Swift'
+    pod 'HMSegmentedControl'
+    
+
+end
