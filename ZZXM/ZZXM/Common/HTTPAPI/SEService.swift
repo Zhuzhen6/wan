@@ -24,6 +24,10 @@ enum API
     case tree
     //导航数据
     case navi
+    //项目分类
+    case projectlist
+    //项目文章
+    case project(page: Int,cid: Int)
 }
 
 
@@ -47,6 +51,10 @@ extension API:TargetType
             return "tree/json"
         case .navi:
             return "navi/json"
+        case .projectlist:
+            return "project/tree/json"
+        case .project(let page, _):
+            return "project/list/\(page)/json"
         }
     }
     
@@ -68,10 +76,13 @@ extension API:TargetType
     }
     
     var task: Task {
-        
+        var parmeters: [String : Any] = [:]
         switch self {
         case .login(let parameters):
             return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
+        case .project(let _, let cid):
+            parmeters["cid"] = cid
+            return .requestParameters(parameters: parmeters, encoding: URLEncoding.queryString)
         default:
             return .requestPlain
         }

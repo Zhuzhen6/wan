@@ -21,7 +21,7 @@ target 'ZZXM' do
     pod 'MBProgressHUD'
     pod 'IQKeyboardManagerSwift'
     pod 'EmptyDataSet-Swift'
-    pod 'HMSegmentedControl'
+    pod 'HMSegmentedControl'#标题控制器
     
 
 end

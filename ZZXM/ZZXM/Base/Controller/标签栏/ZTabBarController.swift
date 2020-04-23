@@ -25,16 +25,21 @@ extension ZTabBarController{
         let home = HomeViewController()
         setupChild(childController: home, title: "首页", image: "tab_home")
         
-        /// 分类
-        let cateList = TreeViewController()
-        setupChild(childController: cateList, title: "分类", image: "tab_class")
+        //体系分页
+        let treePageVC = TreeAndNaviViewController(titles: ["体系","导航",],
+                                            vcs: [TreeViewController(),
+                                                  NaviViewController()],
+                                            pageStyle: .navgationBarSegment)
         
-        /// 书架
-        let book = NaviViewController()
+        setupChild(childController: treePageVC, title: "体系", image: "tab_class")
+        
+        /// 文章
+        let book = BookViewController()
         setupChild(childController: book, title: "书架", image: "tab_book")
         
+        
         /// 我的
-        let mine = NaviViewController()//XMMineViewController()
+        let mine = XMMineViewController()
         setupChild(childController: mine, title: "我的", image: "tab_mine")
         
     }
