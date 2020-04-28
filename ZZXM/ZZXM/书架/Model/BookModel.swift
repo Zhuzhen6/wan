@@ -33,14 +33,3 @@ class BookDetailModel: HandyJSON {
     required init() {}
 }
 
-class BookModel: HandyJSON {
-    
-    var datas: [BookDetailModel]?
-    var curPage: Int = 0
-    var offset: Int?
-    var over: Bool = false
-    var pageCount: Int?
-    var size: Int?
-    var total: Int?
-    required init() {}
-}

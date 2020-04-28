@@ -8,12 +8,14 @@
 
 import UIKit
 import LLCycleScrollView
+import PKHUD
 
 
 class HomeViewController: ZBaseViewController {
 
+
     private var bannerDatas = [BannerModel]()
-    private var articleModel = ArticleModel()
+    private var articleModel = PageModel<ArticleDetailModel>()
     private var listArray = [ArticleDetailModel]()
 
     
@@ -51,9 +53,13 @@ class HomeViewController: ZBaseViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         requestArticleData(page: 0)
         requestBaner()
-        
     }
     
     override func setupLayout() {
@@ -79,6 +85,9 @@ class HomeViewController: ZBaseViewController {
         
         Network.request(.banner, model: [BannerModel].self) { (returnData) in
 
+            if returnData == nil {
+                return
+            }
             self.bannerDatas = returnData!
             let filterArr = self.bannerDatas.filter { $0.imagePath != nil }.map { $0.imagePath! }
             self.bannerView.imagePaths = filterArr
@@ -98,15 +107,17 @@ class HomeViewController: ZBaseViewController {
     private func requestArticleData(page: Int)
     {
         
-        Network.request(.article(page: page), model: ArticleModel.self) { (returnData) in
+        Network.request(.article(page: page), model: PageModel<ArticleDetailModel>.self) { (returnData) in
 
             if returnData?.over == false {
                 self.tableView.uFoot.endRefreshing()
             } else {
                 self.tableView.uFoot.endRefreshingWithNoMoreData()
+                return
             }
             if page == 0{
                 self.tableView.uHead.endRefreshing()
+                self.listArray.removeAll()
             }
             self.articleModel = returnData!
             self.listArray.append(contentsOf: self.articleModel.datas!)
@@ -166,7 +177,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         cell.layer.cornerRadius = 6
         cell.layer.masksToBounds = true
-        cell.viewModel = listArray[indexPath.section]
+        let model = listArray[indexPath.section]
+        cell.viewModel = model
+        cell.CollectAction { [weak self] in
+
+            self?.collect(model: model)
+        }
         return cell
     }
     
@@ -177,4 +193,47 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let controller = ZWebController(url: urlString!)
         self.navigationController!.pushViewController(controller, animated: true)
     }
+    
+    private func collect(model : ArticleDetailModel)
+    {
+        if !model.collect {
+           
+            Network.requestNOBaseModel(.collect(articleid: model.id!), model: BaseModel<ArticleDetailModel>.self) { (data) in
+                
+                if data?.errorCode == 0
+                {
+                    HUD.flash(.labeledSuccess(title: "", subtitle: "收藏成功"), delay: 1)
+                    model.collect = true
+                    self.tableView.reloadData()
+                    
+                }
+                else
+                {
+                    HUD.flash(.labeledError(title: "错误", subtitle: data?.errorMsg), delay: 1)
+                }
+                
+            }
+        }
+        else
+        {
+            Network.requestNOBaseModel(.uncollect_originId(articleid: model.id!), model: BaseModel<ArticleDetailModel>.self) { (data) in
+                
+                if data?.errorCode == 0
+                {
+                    HUD.flash(.labeledSuccess(title: "", subtitle: "已取消收藏"), delay: 1)
+                    model.collect = false
+                    self.tableView.reloadData()
+                    
+                }
+                else
+                {
+                    HUD.flash(.labeledError(title: "错误", subtitle: data?.errorMsg), delay: 1)
+                }
+                
+            }
+        }
+        
+        
+    }
+    
 }

@@ -12,6 +12,7 @@ import HMSegmentedControl
 enum PageStyle {
     case none
     case navgationBarSegment
+    case navgationBarSegmentWithLine
     case topTabBar
 }
 
@@ -87,6 +88,22 @@ class ZPageController: ZBaseViewController {
             segment.frame = CGRect(x: 0, y: 0, width: 120, height: 40)
             
             pageVC.view.snp.makeConstraints { $0.edges.equalToSuperview() }
+        case .navgationBarSegmentWithLine?:
+            segment.backgroundColor = UIColor.clear
+            segment.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5),
+                                           NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)]
+            segment.selectedTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,
+                                                   NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)]
+            
+            segment.selectionIndicatorLocation = .down
+            segment.selectionIndicatorColor = .white
+            segment.selectionIndicatorHeight = 2
+            
+        
+            navigationItem.titleView = segment
+            segment.frame = CGRect(x: 0, y: 0, width: screenWidth, height: 40)
+            
+            pageVC.view.snp.makeConstraints { $0.edges.equalToSuperview() }
         case .topTabBar?:
             segment.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black,
                                            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)]
@@ -98,6 +115,7 @@ class ZPageController: ZBaseViewController {
             segment.borderType = .bottom
             segment.borderColor = UIColor.lightGray
             segment.borderWidth = 0.5
+        
             
             view.addSubview(segment)
             segment.snp.makeConstraints{

@@ -7,13 +7,14 @@
 //
 
 import UIKit
-import HMSegmentedControl
-
+import JXSegmentedView
 class BookViewController: ZBaseViewController {
     
-    
-    private var bookModel = BookModel()
+    private var bookModel = PageModel<BookDetailModel>()
     private var listArray = [BookDetailModel]()
+    
+    var Cid:Int?
+    
 
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
@@ -24,33 +25,18 @@ class BookViewController: ZBaseViewController {
         tableView.register(BookCell.self, forCellReuseIdentifier: BookCell.reuseIdentifier)
         tableView.uFoot = URefreshFooter {
             
-            self.requestBookData(page: self.bookModel.curPage + 1)
+            self.requestBookData(page: self.bookModel.curPage + 1 ,cid:self.Cid! )
         }
         tableView.uHead = URefreshHeader{
-            self.requestBookData(page: 0)
+            self.requestBookData(page: 0,cid: self.Cid!)
         }
         
         return tableView
     }()
-    
-    lazy var page: HMSegmentedControl = {
-        let page = HMSegmentedControl()
-        page.backgroundColor = themColor
-        page.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5),
-                                       NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)]
-        page.selectedTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,
-                                               NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)]
-        page.selectionIndicatorLocation = .down
-        page.selectionIndicatorColor = .white
-        page.selectionIndicatorHeight = 2
-        page.addTarget(self, action: #selector(changeIndex(segment:)), for: .valueChanged)
-        return page
-    }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        requestBookData(page: 0)
     }
     
     override func setupLayout() {
@@ -58,34 +44,29 @@ class BookViewController: ZBaseViewController {
         view.addSubview(tableView)
         tableView.snp.makeConstraints {make in make.edges.equalTo(self.view.usnp.edges) }
         
-        view.addSubview(page)
-        page.snp.makeConstraints{
-            $0.left.right.equalToSuperview()
-            $0.top.equalTo(self.view.snp.top)
-            $0.height.equalTo(80)
-        }
     }
     
     override func configNavigationBar() {
         super.configNavigationBar()
         
-        page.sectionTitles = ["体系","导航",]
-        
-        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    private func requestBookData(page: Int)
+    
+    open func requestBookData(page: Int,cid: Int)
     {
         
-        Network.request(.project(page: page, cid: 294), model: BookModel.self) { (returnData) in
+        Network.request(.project(page: page, cid: cid), model: PageModel<BookDetailModel>.self) { (returnData) in
 
+            self.Cid = cid
             if returnData?.over == false {
                 self.tableView.uFoot.endRefreshing()
             } else {
                 self.tableView.uFoot.endRefreshingWithNoMoreData()
+                return
             }
             if page == 0{
                 self.tableView.uHead.endRefreshing()
+                self.listArray.removeAll()
             }
             self.bookModel = returnData!
             self.listArray.append(contentsOf: self.bookModel.datas!)
@@ -93,9 +74,6 @@ class BookViewController: ZBaseViewController {
         }
     }
     
-    @objc func changeIndex(segment: UISegmentedControl) {
-        
-    }
 
 }
 
@@ -156,5 +134,13 @@ extension BookViewController: UITableViewDelegate,UITableViewDataSource
         let urlString = resource.link
         let controller = ZWebController(url: urlString!)
         self.navigationController!.pushViewController(controller, animated: true)
+    }
+}
+
+
+
+extension BookViewController: JXSegmentedListContainerViewListDelegate {
+    func listView() -> UIView {
+        return view
     }
 }

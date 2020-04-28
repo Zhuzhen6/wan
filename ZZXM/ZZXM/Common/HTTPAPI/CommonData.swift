@@ -10,26 +10,6 @@ import UIKit
 import HandyJSON
 
 
-
-class Collect: HandyJSON {
-    
-    required init() {}
-    
-}
-
-class User: HandyJSON {
-
-    var id: Int?
-    var publicName: String?
-    var email: String?
-    var collectIds: [Collect]!
-    var icon: String?
-    
-    required init() {}
-    
-}
-
-
 extension Array: HandyJSON{}//保证BaseModel下为数组模型 例如:[BannerModel]
 
 class BaseModel<T: HandyJSON>: HandyJSON {
@@ -40,4 +20,16 @@ class BaseModel<T: HandyJSON>: HandyJSON {
     
     required init() {}
     
+}
+
+class PageModel<T: HandyJSON>: HandyJSON {
+    
+    var datas: [T]?
+    var curPage: Int = 0
+    var offset: Int?
+    var over: Bool = false
+    var pageCount: Int?
+    var size: Int?
+    var total: Int?
+    required init() {}
 }

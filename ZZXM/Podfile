@@ -9,7 +9,6 @@ target 'ZZXM' do
   use_frameworks!
 
   # Pods for ZZXM
-	∫
     pod 'SnapKit'  #布局
     pod 'HandyJSON' #数据解析
     pod 'Result'
@@ -22,6 +21,10 @@ target 'ZZXM' do
     pod 'IQKeyboardManagerSwift'
     pod 'EmptyDataSet-Swift'
     pod 'HMSegmentedControl'#标题控制器
+    
+    pod 'JXSegmentedView'#分页
+    pod 'PKHUD'
+    pod 'Cache'#缓存
     
 
 end

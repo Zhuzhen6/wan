@@ -7,8 +7,23 @@
 //
 
 import UIKit
+import Then
+
+// 回调 相当于 OC中的Block (闭包)
+typealias CollectActionBlock = ()->Void
+
+//代理
+protocol HomeViewCellDelegate: class {
+    func collectAction()
+}
 
 class HomeViewCell: UITableViewCell {
+    
+    // 回调声明 相当于 OC中的Block
+    private var CollectAction: CollectActionBlock?
+    
+    // 代理声明 弱引用
+    weak var delegate: HomeViewCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -79,8 +94,24 @@ class HomeViewCell: UITableViewCell {
         let collectionBtn = UIButton()
         let image: UIImage! = UIImage(named: "lujing")
         collectionBtn.setBackgroundImage(image, for: .normal)
+        collectionBtn.addTarget(self, action: #selector(collectActionClick), for: .touchUpInside)
         return collectionBtn
     }()
+    
+    
+    @objc private func collectActionClick(button: UIButton) {
+        
+        //代理
+        delegate?.collectAction()
+        
+        //Block
+        guard let closure = CollectAction else { return }
+        closure()
+    }
+    
+    func CollectAction(_ closure: @escaping CollectActionBlock) {
+        CollectAction = closure
+    }
     
     func setupUI()
     {
@@ -122,7 +153,7 @@ class HomeViewCell: UITableViewCell {
         
         collectionBtn.snp.makeConstraints { (maker) in
             maker.right.bottom.equalToSuperview().offset(-15)
-            maker.width.height.equalTo(25)
+            maker.width.height.equalTo(30)
         }
     }
     
@@ -135,9 +166,30 @@ class HomeViewCell: UITableViewCell {
             descLabel.text = viewModel.title
             typeLabel.text = viewModel.superChapterName
 
-            let image: UIImage! = UIImage(named: "lujing")
+            let image = viewModel.collect ? UIImage(named: "lujing_c") : UIImage(named: "lujing")
             collectionBtn.setBackgroundImage(image, for: .normal)
         }
     }
+    
+
 }
 
+
+//缓存高度 暂没用 记录一下
+class ArticleViewModel {
+    
+    var model: ArticleDetailModel?
+    var height: CGFloat = 0
+    
+    convenience init(model: ArticleDetailModel) {
+        self.init()
+        self.model = model
+        
+        let textView = UITextView().then { $0.font = UIFont.systemFont(ofSize: 13) }
+        textView.text = model.title
+        let height = textView.sizeThatFits(CGSize(width: screenWidth - 70, height: CGFloat.infinity)).height
+        self.height = max(60, height + 45)
+    }
+    
+    required init() {}
+}

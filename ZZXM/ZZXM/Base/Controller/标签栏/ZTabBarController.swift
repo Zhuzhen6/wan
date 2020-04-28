@@ -33,13 +33,13 @@ extension ZTabBarController{
         
         setupChild(childController: treePageVC, title: "体系", image: "tab_class")
         
-        /// 文章
-        let book = BookViewController()
-        setupChild(childController: book, title: "书架", image: "tab_book")
+        
+        let bookPageVC = BookPageViewController()
+        setupChild(childController: bookPageVC, title: "书架", image: "tab_book")
         
         
         /// 我的
-        let mine = XMMineViewController()
+        let mine = MineViewController()
         setupChild(childController: mine, title: "我的", image: "tab_mine")
         
     }

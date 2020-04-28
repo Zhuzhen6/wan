@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		925F78ED1C863A8C70BE7AFA /* Pods_ZZXM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638A77355F30B8D0EBC73927 /* Pods_ZZXM.framework */; };
-		9F08C756244567450095F202 /* MineTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F08C755244567450095F202 /* MineTableHeaderView.swift */; };
 		9F08C75D244568930095F202 /* UIScreen+Bounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F08C75C244568930095F202 /* UIScreen+Bounds.swift */; };
 		9F08C75F24456CB50095F202 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F08C75E24456CB50095F202 /* UIColor+RGB.swift */; };
 		9F08C7632445829D0095F202 /* UILabel+QuickUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F08C7622445829D0095F202 /* UILabel+QuickUI.swift */; };
@@ -30,7 +29,6 @@
 		9F7A7A2A217F022E007C7533 /* ZNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A7A29217F022E007C7533 /* ZNavigationController.swift */; };
 		9F7A7A2F217F06D6007C7533 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A7A2E217F06D6007C7533 /* HomeViewController.swift */; };
 		9F7A7A36217F09B3007C7533 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A7A35217F09B3007C7533 /* BookViewController.swift */; };
-		9F7A7A3A217F09D8007C7533 /* XMMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A7A39217F09D8007C7533 /* XMMineViewController.swift */; };
 		9F7A7A3C217F0B37007C7533 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7A7A3B217F0B37007C7533 /* Main.storyboard */; };
 		9F7A7A6021800090007C7533 /* ZBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A7A5F21800090007C7533 /* ZBaseViewController.swift */; };
 		9F96EDD6244AE5A400C8FE66 /* TreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96EDD5244AE5A400C8FE66 /* TreeViewController.swift */; };
@@ -42,6 +40,17 @@
 		9F96EDE82450390F00C8FE66 /* TreeAndNaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96EDE72450390F00C8FE66 /* TreeAndNaviViewController.swift */; };
 		9F96EDEB24512B4300C8FE66 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96EDEA24512B4300C8FE66 /* BookCell.swift */; };
 		9F96EDEE2451326700C8FE66 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96EDED2451326700C8FE66 /* BookModel.swift */; };
+		9F96EE0B245568DC00C8FE66 /* BookPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96EE0A245568DC00C8FE66 /* BookPageViewController.swift */; };
+		9F96EE2E24567BF900C8FE66 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96EE2D24567BF900C8FE66 /* LoginViewController.swift */; };
+		9F96EE302456945D00C8FE66 /* logo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9F96EE2F2456945D00C8FE66 /* logo.mp4 */; };
+		9F96EE322456B55400C8FE66 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96EE312456B55400C8FE66 /* UserModel.swift */; };
+		9F96EE382456DBBA00C8FE66 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96EE372456DBBA00C8FE66 /* MineViewController.swift */; };
+		9F96EE3A2457BE1F00C8FE66 /* MineHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96EE392457BE1F00C8FE66 /* MineHeader.swift */; };
+		9F96EE3C2457F50A00C8FE66 /* CoinListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96EE3B2457F50A00C8FE66 /* CoinListViewController.swift */; };
+		9F96EE3F2457F5A700C8FE66 /* CoinTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96EE3D2457F5A700C8FE66 /* CoinTableCell.swift */; };
+		9F96EE402457F5A700C8FE66 /* CoinTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F96EE3E2457F5A700C8FE66 /* CoinTableCell.xib */; };
+		9F96EE4C2458281500C8FE66 /* MyCollectTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96EE4B2458281500C8FE66 /* MyCollectTableCell.swift */; };
+		9F96EE4E2458283500C8FE66 /* MyCollectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96EE4D2458283500C8FE66 /* MyCollectViewController.swift */; };
 		9FD0A7582446A06100C22A25 /* SEService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0A7572446A06100C22A25 /* SEService.swift */; };
 		9FD0A75A2446B88500C22A25 /* NetworkManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0A7592446B88500C22A25 /* NetworkManage.swift */; };
 		9FD0A75C2446D37300C22A25 /* CommonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0A75B2446D37300C22A25 /* CommonData.swift */; };
@@ -52,7 +61,6 @@
 		2AB8A1262B923644E0BD2BF0 /* Pods-ZZXM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZXM.release.xcconfig"; path = "Target Support Files/Pods-ZZXM/Pods-ZZXM.release.xcconfig"; sourceTree = "<group>"; };
 		638A77355F30B8D0EBC73927 /* Pods_ZZXM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZZXM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B398D5D1029FBB932EB484C /* Pods-ZZXM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZXM.debug.xcconfig"; path = "Target Support Files/Pods-ZZXM/Pods-ZZXM.debug.xcconfig"; sourceTree = "<group>"; };
-		9F08C755244567450095F202 /* MineTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineTableHeaderView.swift; sourceTree = "<group>"; };
 		9F08C75C244568930095F202 /* UIScreen+Bounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Bounds.swift"; sourceTree = "<group>"; };
 		9F08C75E24456CB50095F202 /* UIColor+RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
 		9F08C7622445829D0095F202 /* UILabel+QuickUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+QuickUI.swift"; sourceTree = "<group>"; };
@@ -76,7 +84,6 @@
 		9F7A7A29217F022E007C7533 /* ZNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZNavigationController.swift; sourceTree = "<group>"; };
 		9F7A7A2E217F06D6007C7533 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9F7A7A35217F09B3007C7533 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
-		9F7A7A39217F09D8007C7533 /* XMMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMMineViewController.swift; sourceTree = "<group>"; };
 		9F7A7A3B217F0B37007C7533 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9F7A7A5F21800090007C7533 /* ZBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZBaseViewController.swift; sourceTree = "<group>"; };
 		9F96EDD5244AE5A400C8FE66 /* TreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +95,17 @@
 		9F96EDE72450390F00C8FE66 /* TreeAndNaviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeAndNaviViewController.swift; sourceTree = "<group>"; };
 		9F96EDEA24512B4300C8FE66 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		9F96EDED2451326700C8FE66 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
+		9F96EE0A245568DC00C8FE66 /* BookPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPageViewController.swift; sourceTree = "<group>"; };
+		9F96EE2D24567BF900C8FE66 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9F96EE2F2456945D00C8FE66 /* logo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = logo.mp4; sourceTree = "<group>"; };
+		9F96EE312456B55400C8FE66 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		9F96EE372456DBBA00C8FE66 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		9F96EE392457BE1F00C8FE66 /* MineHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineHeader.swift; sourceTree = "<group>"; };
+		9F96EE3B2457F50A00C8FE66 /* CoinListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListViewController.swift; sourceTree = "<group>"; };
+		9F96EE3D2457F5A700C8FE66 /* CoinTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTableCell.swift; sourceTree = "<group>"; };
+		9F96EE3E2457F5A700C8FE66 /* CoinTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinTableCell.xib; sourceTree = "<group>"; };
+		9F96EE4B2458281500C8FE66 /* MyCollectTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectTableCell.swift; sourceTree = "<group>"; };
+		9F96EE4D2458283500C8FE66 /* MyCollectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectViewController.swift; sourceTree = "<group>"; };
 		9FD0A7572446A06100C22A25 /* SEService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEService.swift; sourceTree = "<group>"; };
 		9FD0A7592446B88500C22A25 /* NetworkManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManage.swift; sourceTree = "<group>"; };
 		9FD0A75B2446D37300C22A25 /* CommonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonData.swift; sourceTree = "<group>"; };
@@ -111,7 +129,10 @@
 			children = (
 				9F08C766244584D70095F202 /* MineTableCell.swift */,
 				9F08C767244584D70095F202 /* MineTableCell.xib */,
-				9F08C755244567450095F202 /* MineTableHeaderView.swift */,
+				9F96EE392457BE1F00C8FE66 /* MineHeader.swift */,
+				9F96EE3D2457F5A700C8FE66 /* CoinTableCell.swift */,
+				9F96EE3E2457F5A700C8FE66 /* CoinTableCell.xib */,
+				9F96EE4B2458281500C8FE66 /* MyCollectTableCell.swift */,
 			);
 			path = "View ";
 			sourceTree = "<group>";
@@ -167,6 +188,7 @@
 		9F0AF0EB244824AC00EFF615 /* 搜索 */ = {
 			isa = PBXGroup;
 			children = (
+				9F0AF0F7244829C900EFF615 /* SearchViewController.swift */,
 			);
 			path = "搜索";
 			sourceTree = "<group>";
@@ -217,6 +239,7 @@
 				9F7A7A2D217F06A0007C7533 /* 首页 */,
 				9F7A7A30217F06EB007C7533 /* 体系 */,
 				9F7A7A31217F06F6007C7533 /* 书架 */,
+				9F96EE2C24567BE000C8FE66 /* Login */,
 				9F7A7A32217F06FE007C7533 /* 我的 */,
 				9F08C757244567900095F202 /* Common */,
 			);
@@ -238,7 +261,6 @@
 				9F0AF0EB244824AC00EFF615 /* 搜索 */,
 				9FD0A75224469AED00C22A25 /* View */,
 				9F7A7A2E217F06D6007C7533 /* HomeViewController.swift */,
-				9F0AF0F7244829C900EFF615 /* SearchViewController.swift */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -261,6 +283,7 @@
 				9F96EDEC2451324F00C8FE66 /* Model */,
 				9F96EDE924512B2800C8FE66 /* View */,
 				9F7A7A35217F09B3007C7533 /* BookViewController.swift */,
+				9F96EE0A245568DC00C8FE66 /* BookPageViewController.swift */,
 			);
 			path = "书架";
 			sourceTree = "<group>";
@@ -269,7 +292,9 @@
 			isa = PBXGroup;
 			children = (
 				9F08C754244567350095F202 /* View  */,
-				9F7A7A39217F09D8007C7533 /* XMMineViewController.swift */,
+				9F96EE372456DBBA00C8FE66 /* MineViewController.swift */,
+				9F96EE3B2457F50A00C8FE66 /* CoinListViewController.swift */,
+				9F96EE4D2458283500C8FE66 /* MyCollectViewController.swift */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -313,6 +338,16 @@
 				9F96EDED2451326700C8FE66 /* BookModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9F96EE2C24567BE000C8FE66 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9F96EE2F2456945D00C8FE66 /* logo.mp4 */,
+				9F96EE2D24567BF900C8FE66 /* LoginViewController.swift */,
+				9F96EE312456B55400C8FE66 /* UserModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		9FD0A75224469AED00C22A25 /* View */ = {
@@ -427,6 +462,8 @@
 				9F7A7A26217EFC3C007C7533 /* Assets.xcassets in Resources */,
 				9F7A7A1C217ED3B6007C7533 /* LaunchScreen.storyboard in Resources */,
 				9F7A7A3C217F0B37007C7533 /* Main.storyboard in Resources */,
+				9F96EE402457F5A700C8FE66 /* CoinTableCell.xib in Resources */,
+				9F96EE302456945D00C8FE66 /* logo.mp4 in Resources */,
 				9F08C769244584D70095F202 /* MineTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,28 +517,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F96EE2E24567BF900C8FE66 /* LoginViewController.swift in Sources */,
 				9F0AF10A2449900A00EFF615 /* URefresh.swift in Sources */,
 				9F08C75D244568930095F202 /* UIScreen+Bounds.swift in Sources */,
 				9F0AF0FA24482F7900EFF615 /* Cell+ReuseIdentifier.swift in Sources */,
-				9F08C756244567450095F202 /* MineTableHeaderView.swift in Sources */,
 				9F96EDE1244D77D400C8FE66 /* NaviViewController.swift in Sources */,
 				9FD0A75A2446B88500C22A25 /* NetworkManage.swift in Sources */,
+				9F96EE322456B55400C8FE66 /* UserModel.swift in Sources */,
+				9F96EE4E2458283500C8FE66 /* MyCollectViewController.swift in Sources */,
+				9F96EE3A2457BE1F00C8FE66 /* MineHeader.swift in Sources */,
 				9FD0A7582446A06100C22A25 /* SEService.swift in Sources */,
-				9F7A7A3A217F09D8007C7533 /* XMMineViewController.swift in Sources */,
+				9F96EE4C2458281500C8FE66 /* MyCollectTableCell.swift in Sources */,
+				9F96EE3C2457F50A00C8FE66 /* CoinListViewController.swift in Sources */,
 				9F08C75F24456CB50095F202 /* UIColor+RGB.swift in Sources */,
 				9F0AF106244950F800EFF615 /* HomeViewCell.swift in Sources */,
 				9F96EDE82450390F00C8FE66 /* TreeAndNaviViewController.swift in Sources */,
 				9F96EDE3244D870F00C8FE66 /* NaviCell.swift in Sources */,
 				9F08C7632445829D0095F202 /* UILabel+QuickUI.swift in Sources */,
+				9F96EE382456DBBA00C8FE66 /* MineViewController.swift in Sources */,
 				9F7A7A36217F09B3007C7533 /* BookViewController.swift in Sources */,
 				9F7A7A25217EF914007C7533 /* ZTabBarController.swift in Sources */,
 				9F7A7A6021800090007C7533 /* ZBaseViewController.swift in Sources */,
 				9F96EDEE2451326700C8FE66 /* BookModel.swift in Sources */,
+				9F96EE0B245568DC00C8FE66 /* BookPageViewController.swift in Sources */,
 				9F96EDDF244AF64B00C8FE66 /* TreeCollectionHeader.swift in Sources */,
 				9F0AF1012448454100EFF615 /* UCollectionViewAlignedLayout.swift in Sources */,
 				9F08C765244583140095F202 /* UIButton+QuickUI.swift in Sources */,
 				9F08C768244584D70095F202 /* MineTableCell.swift in Sources */,
 				9F0AF0F8244829C900EFF615 /* SearchViewController.swift in Sources */,
+				9F96EE3F2457F5A700C8FE66 /* CoinTableCell.swift in Sources */,
 				9F96EDD9244AE76300C8FE66 /* TreeMoel.swift in Sources */,
 				9F7A7A2A217F022E007C7533 /* ZNavigationController.swift in Sources */,
 				9FD0A75C2446D37300C22A25 /* CommonData.swift in Sources */,

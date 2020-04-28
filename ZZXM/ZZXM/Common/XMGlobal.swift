@@ -12,7 +12,7 @@ import SnapKit
 
 
 let bgColor = UIColor(red: 242, green: 242, blue: 242)
-let themColor = UIColor(red: 29, green: 221, blue: 43)
+let themColor = UIColor(red: 28, green: 221, blue: 143)
 
 
 
@@ -50,5 +50,12 @@ extension ConstraintView {
         } else {
             return self.snp
         }
+    }
+}
+
+
+extension Optional where Wrapped: Collection {
+    var isNilOrEmpty: Bool {
+        return self?.isEmpty ?? true
     }
 }

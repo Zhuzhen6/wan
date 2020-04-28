@@ -148,7 +148,6 @@ class BookCell: UITableViewCell {
             titleLabel.text = viewModel.title
             descLabel.text = viewModel.desc
             typeLabel.text = viewModel.superChapterName
-           // img.kf.setImage(with: URL(string: viewModel.envelopePic!))
             img.kf.setImage(with: URL(string: viewModel.envelopePic!),
             placeholder: UIImage(named: "normal_placeholder_h"),
             options:[.transition(.fade(0.5))])

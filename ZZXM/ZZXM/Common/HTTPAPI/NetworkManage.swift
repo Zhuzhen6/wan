@@ -61,4 +61,19 @@ extension MoyaProvider {
             completion(returnData.data)
         })
     }
+    
+    @discardableResult
+    open func requestNOBaseModel<T: HandyJSON>(_ target: Target,
+                                    model: T.Type,
+                                    completion: ((_ returnData: T?) -> Void)?) -> Cancellable? {
+        
+        return request(target, completion: { (result) in
+            guard let completion = completion else { return }
+            guard let returnData = try? result.value?.mapModel(T.self) else {
+                completion(nil)
+                return
+            }
+            completion(returnData)
+        })
+    }
 }

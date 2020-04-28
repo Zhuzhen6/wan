@@ -19,22 +19,11 @@ class ArticleDetailModel: HandyJSON {
     var niceDate: String?
     var niceShareDate: String?
     var superChapterName: String?
-    var collect: Bool?//是否收藏
+    var collect: Bool = true//是否收藏
     var id: Int? //文章id
     required init() {}
 }
 
-class ArticleModel: HandyJSON {
-    
-    var datas: [ArticleDetailModel]?
-    var curPage: Int = 0
-    var offset: Int?
-    var over: Bool = false
-    var pageCount: Int?
-    var size: Int?
-    var total: Int?
-    required init() {}
-}
 
 
 class SearchModel: HandyJSON {

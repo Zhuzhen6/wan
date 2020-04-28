@@ -1,10 +1,11 @@
 //
 //  MineTableCell.swift
-//  ShareEducation
+//  ZZXM
 //
-//  Created by yanmingjun on 2019/12/1.
-//  Copyright © 2019 严明俊. All rights reserved.
+//  Created by TonghuiMac on 2020/4/27.
+//  Copyright © 2020 TonghuiMac. All rights reserved.
 //
+
 
 import UIKit
 
