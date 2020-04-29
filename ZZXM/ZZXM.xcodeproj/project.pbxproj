@@ -53,6 +53,13 @@
 		9F96EE4E2458283500C8FE66 /* MyCollectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96EE4D2458283500C8FE66 /* MyCollectViewController.swift */; };
 		9F96EE8024594F4200C8FE66 /* 首页.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F96EE7E24594F4200C8FE66 /* 首页.png */; };
 		9F96EE8124594F4200C8FE66 /* 注册.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F96EE7F24594F4200C8FE66 /* 注册.png */; };
+		9F96EE892459512900C8FE66 /* 搜索.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F96EE822459512800C8FE66 /* 搜索.png */; };
+		9F96EE8A2459512900C8FE66 /* 导航.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F96EE832459512800C8FE66 /* 导航.png */; };
+		9F96EE8B2459512900C8FE66 /* 登录.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F96EE842459512800C8FE66 /* 登录.png */; };
+		9F96EE8C2459512900C8FE66 /* 书架.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F96EE852459512900C8FE66 /* 书架.png */; };
+		9F96EE8D2459512900C8FE66 /* 我的积分.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F96EE862459512900C8FE66 /* 我的积分.png */; };
+		9F96EE8E2459512900C8FE66 /* 我的.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F96EE872459512900C8FE66 /* 我的.png */; };
+		9F96EE8F2459512900C8FE66 /* 体系.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F96EE882459512900C8FE66 /* 体系.png */; };
 		9FD0A7582446A06100C22A25 /* SEService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0A7572446A06100C22A25 /* SEService.swift */; };
 		9FD0A75A2446B88500C22A25 /* NetworkManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0A7592446B88500C22A25 /* NetworkManage.swift */; };
 		9FD0A75C2446D37300C22A25 /* CommonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0A75B2446D37300C22A25 /* CommonData.swift */; };
@@ -110,6 +117,13 @@
 		9F96EE4D2458283500C8FE66 /* MyCollectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectViewController.swift; sourceTree = "<group>"; };
 		9F96EE7E24594F4200C8FE66 /* 首页.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页.png"; sourceTree = "<group>"; };
 		9F96EE7F24594F4200C8FE66 /* 注册.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "注册.png"; sourceTree = "<group>"; };
+		9F96EE822459512800C8FE66 /* 搜索.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "搜索.png"; sourceTree = "<group>"; };
+		9F96EE832459512800C8FE66 /* 导航.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航.png"; sourceTree = "<group>"; };
+		9F96EE842459512800C8FE66 /* 登录.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录.png"; sourceTree = "<group>"; };
+		9F96EE852459512900C8FE66 /* 书架.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "书架.png"; sourceTree = "<group>"; };
+		9F96EE862459512900C8FE66 /* 我的积分.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的积分.png"; sourceTree = "<group>"; };
+		9F96EE872459512900C8FE66 /* 我的.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的.png"; sourceTree = "<group>"; };
+		9F96EE882459512900C8FE66 /* 体系.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "体系.png"; sourceTree = "<group>"; };
 		9FD0A7572446A06100C22A25 /* SEService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEService.swift; sourceTree = "<group>"; };
 		9FD0A7592446B88500C22A25 /* NetworkManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManage.swift; sourceTree = "<group>"; };
 		9FD0A75B2446D37300C22A25 /* CommonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonData.swift; sourceTree = "<group>"; };
@@ -358,6 +372,13 @@
 		9F96EE4F24582CBF00C8FE66 /* 图片 */ = {
 			isa = PBXGroup;
 			children = (
+				9F96EE832459512800C8FE66 /* 导航.png */,
+				9F96EE842459512800C8FE66 /* 登录.png */,
+				9F96EE852459512900C8FE66 /* 书架.png */,
+				9F96EE822459512800C8FE66 /* 搜索.png */,
+				9F96EE882459512900C8FE66 /* 体系.png */,
+				9F96EE872459512900C8FE66 /* 我的.png */,
+				9F96EE862459512900C8FE66 /* 我的积分.png */,
 				9F96EE7E24594F4200C8FE66 /* 首页.png */,
 				9F96EE7F24594F4200C8FE66 /* 注册.png */,
 			);
@@ -473,12 +494,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F96EE8F2459512900C8FE66 /* 体系.png in Resources */,
 				9F7A7A26217EFC3C007C7533 /* Assets.xcassets in Resources */,
 				9F7A7A1C217ED3B6007C7533 /* LaunchScreen.storyboard in Resources */,
 				9F7A7A3C217F0B37007C7533 /* Main.storyboard in Resources */,
 				9F96EE402457F5A700C8FE66 /* CoinTableCell.xib in Resources */,
 				9F96EE8024594F4200C8FE66 /* 首页.png in Resources */,
+				9F96EE8C2459512900C8FE66 /* 书架.png in Resources */,
+				9F96EE8E2459512900C8FE66 /* 我的.png in Resources */,
+				9F96EE8A2459512900C8FE66 /* 导航.png in Resources */,
+				9F96EE892459512900C8FE66 /* 搜索.png in Resources */,
 				9F96EE8124594F4200C8FE66 /* 注册.png in Resources */,
+				9F96EE8D2459512900C8FE66 /* 我的积分.png in Resources */,
+				9F96EE8B2459512900C8FE66 /* 登录.png in Resources */,
 				9F96EE302456945D00C8FE66 /* logo.mp4 in Resources */,
 				9F08C769244584D70095F202 /* MineTableCell.xib in Resources */,
 			);
