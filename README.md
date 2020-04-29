@@ -7,5 +7,6 @@ swift学习项目 MVC + SnapKit + Moya + HandyJSON
 ![4](https://github.com/Zhuzhen6/wan/blob/master/ZZXM/ZZXM/图片/导航.png)
 ![5](https://github.com/Zhuzhen6/wan/blob/master/ZZXM/ZZXM/图片/书架.png)
 ![6](https://github.com/Zhuzhen6/wan/blob/master/ZZXM/ZZXM/图片/我的.png)
+![6](https://github.com/Zhuzhen6/wan/blob/master/ZZXM/ZZXM/图片/我的积分.png)
 ![7](https://github.com/Zhuzhen6/wan/blob/master/ZZXM/ZZXM/图片/登录.png)
 ![8](https://github.com/Zhuzhen6/wan/blob/master/ZZXM/ZZXM/图片/注册.png)
