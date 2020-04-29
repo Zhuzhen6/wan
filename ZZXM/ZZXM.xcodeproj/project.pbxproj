@@ -51,8 +51,8 @@
 		9F96EE402457F5A700C8FE66 /* CoinTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F96EE3E2457F5A700C8FE66 /* CoinTableCell.xib */; };
 		9F96EE4C2458281500C8FE66 /* MyCollectTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96EE4B2458281500C8FE66 /* MyCollectTableCell.swift */; };
 		9F96EE4E2458283500C8FE66 /* MyCollectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96EE4D2458283500C8FE66 /* MyCollectViewController.swift */; };
-		9F96EE7424594A0800C8FE66 /* 注册.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F96EE7224594A0700C8FE66 /* 注册.png */; };
 		9F96EE7524594A0800C8FE66 /* 首页.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F96EE7324594A0800C8FE66 /* 首页.png */; };
+		9F96EE7724594B2F00C8FE66 /* 注册.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F96EE7624594B2F00C8FE66 /* 注册.png */; };
 		9FD0A7582446A06100C22A25 /* SEService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0A7572446A06100C22A25 /* SEService.swift */; };
 		9FD0A75A2446B88500C22A25 /* NetworkManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0A7592446B88500C22A25 /* NetworkManage.swift */; };
 		9FD0A75C2446D37300C22A25 /* CommonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0A75B2446D37300C22A25 /* CommonData.swift */; };
@@ -108,8 +108,8 @@
 		9F96EE3E2457F5A700C8FE66 /* CoinTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinTableCell.xib; sourceTree = "<group>"; };
 		9F96EE4B2458281500C8FE66 /* MyCollectTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectTableCell.swift; sourceTree = "<group>"; };
 		9F96EE4D2458283500C8FE66 /* MyCollectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectViewController.swift; sourceTree = "<group>"; };
-		9F96EE7224594A0700C8FE66 /* 注册.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "注册.png"; sourceTree = "<group>"; };
 		9F96EE7324594A0800C8FE66 /* 首页.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页.png"; sourceTree = "<group>"; };
+		9F96EE7624594B2F00C8FE66 /* 注册.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "注册.png"; sourceTree = "<group>"; };
 		9FD0A7572446A06100C22A25 /* SEService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEService.swift; sourceTree = "<group>"; };
 		9FD0A7592446B88500C22A25 /* NetworkManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManage.swift; sourceTree = "<group>"; };
 		9FD0A75B2446D37300C22A25 /* CommonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonData.swift; sourceTree = "<group>"; };
@@ -358,8 +358,8 @@
 		9F96EE4F24582CBF00C8FE66 /* 图片 */ = {
 			isa = PBXGroup;
 			children = (
+				9F96EE7624594B2F00C8FE66 /* 注册.png */,
 				9F96EE7324594A0800C8FE66 /* 首页.png */,
-				9F96EE7224594A0700C8FE66 /* 注册.png */,
 			);
 			path = "图片";
 			sourceTree = "<group>";
@@ -474,11 +474,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F7A7A26217EFC3C007C7533 /* Assets.xcassets in Resources */,
-				9F96EE7424594A0800C8FE66 /* 注册.png in Resources */,
 				9F7A7A1C217ED3B6007C7533 /* LaunchScreen.storyboard in Resources */,
 				9F7A7A3C217F0B37007C7533 /* Main.storyboard in Resources */,
 				9F96EE7524594A0800C8FE66 /* 首页.png in Resources */,
 				9F96EE402457F5A700C8FE66 /* CoinTableCell.xib in Resources */,
+				9F96EE7724594B2F00C8FE66 /* 注册.png in Resources */,
 				9F96EE302456945D00C8FE66 /* logo.mp4 in Resources */,
 				9F08C769244584D70095F202 /* MineTableCell.xib in Resources */,
 			);
